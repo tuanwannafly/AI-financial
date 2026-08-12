@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.DS_Store
+
+# Raw HF dump (re-downloadable)
+data/raw/
+
+# Large extraction / processed artifacts (regenerate locally)
+data/extracted/
+data/processed/
+*.jsonl
+
+# Gold evidence bulk + sample zip (keep gold_set JSON only in git)
+data/gold/evidence/
+data/gold/sample_submission.zip
+
+# Runtime / backups
+checkpoints/
+logs/
+backups/
+*.tar.gz
+*.zip
+
+# Keep small JSON stats/status in repo; ignore heavy caches
+.cache/

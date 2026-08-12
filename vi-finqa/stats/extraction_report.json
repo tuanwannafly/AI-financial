@@ -1,0 +1,36 @@
+{
+  "total_files": 1973,
+  "files_with_tables": 1965,
+  "files_empty": 8,
+  "coverage": 0.9959452610238216,
+  "main_statement_file_coverage": 0.994931576279777,
+  "n_tables": 125192,
+  "n_main_tables": 22304,
+  "n_with_unit": 2388,
+  "by_table_type": {
+    "CDKT": 8875,
+    "KQKD": 9175,
+    "THUYET_MINH": 74354,
+    "UNKNOWN": 28534,
+    "LCTT": 4254
+  },
+  "n_companies_in_tables": 100,
+  "checkpoint_done": 1973,
+  "tables_per_file": {
+    "min": 1,
+    "p50": 60,
+    "p90": 90,
+    "max": 226,
+    "mean": 63.71
+  },
+  "empty_sample": [
+    "PRT_2020_financial_statement_explanations_extracted",
+    "PRT_2021_explanatory_letters_1_extracted",
+    "PRT_2021_explanatory_letters_2_extracted",
+    "PRT_2022_explanatory_letters_1_extracted",
+    "PRT_2022_explanatory_letters_2_extracted",
+    "PRT_2023_explanatory_letters_1_extracted",
+    "PRT_2023_explanatory_letters_2_extracted",
+    "PRT_2025_financial_statement_explanations_1_extracted"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "macro_f2": 1.0,
+  "answer_accuracy": 1.0,
+  "execution_accuracy": 1.0,
+  "n_scored": 160,
+  "self_check": "gold_vs_gold"
+}

@@ -1,0 +1,15 @@
+{
+  "n_gold": 160,
+  "n_verified": 160,
+  "categories": {
+    "simple_lookup": 50,
+    "calculation": 30,
+    "multi_table": 25,
+    "company_compare": 25,
+    "thuyet_minh": 30
+  },
+  "n_categories_covered": 5,
+  "human_review_batch_exists": true,
+  "human_review_batch_n": 32,
+  "pass": true
+}
