@@ -1,0 +1,761 @@
+[
+  {
+    "question_id": "q_0029",
+    "question": "Tổng tài sản của AAA năm 2014 (BCTC hợp nhất) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0029.csv",
+    "csv_path": "data/gold/evidence/q_0029.csv",
+    "pandas_query": "df[(df['canonical']=='Tổng tài sản') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Tổng tài sản"
+    },
+    "answer": 1421650734913.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0007",
+    "question": "Doanh thu thuần của AAA năm 2014 (BCTC hợp nhất) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|277"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0007.csv",
+    "csv_path": "data/gold/evidence/q_0007.csv",
+    "pandas_query": "df[(df['canonical']=='Doanh thu thuần') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Doanh thu thuần"
+    },
+    "answer": 1560643609091.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0071",
+    "question": "Hàng tồn kho của AAA năm 2016 tăng/giảm bao nhiêu VND so với năm 2015?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2016_consolidated_extracted",
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2016_consolidated_extracted|202",
+      "AAA_financial_statements_2015_consolidated_extracted|205"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0071.csv",
+    "csv_path": "data/gold/evidence/q_0071.csv",
+    "pandas_query": "float(df[df['năm']==2016]['giá_trị'].iloc[0]) - float(df[df['năm']==2015]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2016,
+      "canonical": "Hàng tồn kho",
+      "op": "yoy_diff"
+    },
+    "answer": 236404726287.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0063",
+    "question": "Tài sản dài hạn của AAA năm 2015 tăng/giảm bao nhiêu VND so với năm 2014?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted",
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205",
+      "AAA_financial_statements_2015_separate_extracted|200"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0063.csv",
+    "csv_path": "data/gold/evidence/q_0063.csv",
+    "pandas_query": "float(df[df['năm']==2015]['giá_trị'].iloc[0]) - float(df[df['năm']==2014]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Tài sản dài hạn",
+      "op": "yoy_diff"
+    },
+    "answer": 285568589795.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0058",
+    "question": "Lợi nhuận trước thuế của AAA năm 2015 tăng/giảm bao nhiêu VND so với năm 2014?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted",
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|277",
+      "AAA_financial_statements_2015_separate_extracted|270"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0058.csv",
+    "csv_path": "data/gold/evidence/q_0058.csv",
+    "pandas_query": "float(df[df['năm']==2015]['giá_trị'].iloc[0]) - float(df[df['năm']==2014]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Lợi nhuận trước thuế",
+      "op": "yoy_diff"
+    },
+    "answer": 5704749850.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0036",
+    "question": "Chi phí quản lý doanh nghiệp của AAA năm 2015 (BCTC riêng) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_separate_extracted|270"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0036.csv",
+    "csv_path": "data/gold/evidence/q_0036.csv",
+    "pandas_query": "df[(df['canonical']=='Chi phí quản lý doanh nghiệp') & (df['năm']==2015) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Chi phí quản lý doanh nghiệp"
+    },
+    "answer": 34991346462.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0027",
+    "question": "Tài sản ngắn hạn của AAA năm 2014 (BCTC hợp nhất) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0027.csv",
+    "csv_path": "data/gold/evidence/q_0027.csv",
+    "pandas_query": "df[(df['canonical']=='Tài sản ngắn hạn') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Tài sản ngắn hạn"
+    },
+    "answer": 694379188147.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0140",
+    "question": "Theo thuyết minh / chi tiết BCTC, Đầu tư tài chính ngắn hạn của AAA năm 2015 là bao nhiêu VND?",
+    "category": "thuyet_minh",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_separate_extracted|200"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0140.csv",
+    "csv_path": "data/gold/evidence/q_0140.csv",
+    "pandas_query": "df[(df['canonical']=='Đầu tư tài chính ngắn hạn') & (df['năm']==2015) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Đầu tư tài chính ngắn hạn",
+      "note_proxy": true
+    },
+    "answer": 306487553255.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0023",
+    "question": "Tiền và tương đương tiền của AAA năm 2014 (BCTC hợp nhất) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0023.csv",
+    "csv_path": "data/gold/evidence/q_0023.csv",
+    "pandas_query": "df[(df['canonical']=='Tiền và tương đương tiền') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Tiền và tương đương tiền"
+    },
+    "answer": 336807716067.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0109",
+    "question": "Doanh thu thuần của DBC so với DIG năm 2014 chênh lệch bao nhiêu VND (DBC − DIG)?",
+    "category": "company_compare",
+    "relevant_docs": [
+      "DIG_financial_statements_2015_consolidated_extracted",
+      "DBC_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "DIG_financial_statements_2015_consolidated_extracted|1296",
+      "DBC_financial_statements_2015_consolidated_extracted|1181"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0109.csv",
+    "csv_path": "data/gold/evidence/q_0109.csv",
+    "pandas_query": "float(df[df['company']=='DBC']['giá_trị'].iloc[0]) - float(df[df['company']=='DIG']['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "companies": [
+        "DBC",
+        "DIG"
+      ],
+      "year": 2014,
+      "canonical": "Doanh thu thuần"
+    },
+    "answer": 4495807542653.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0009",
+    "question": "Hàng tồn kho của AAA năm 2014 (BCTC hợp nhất) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0009.csv",
+    "csv_path": "data/gold/evidence/q_0009.csv",
+    "pandas_query": "df[(df['canonical']=='Hàng tồn kho') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Hàng tồn kho"
+    },
+    "answer": 137522087909.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0008",
+    "question": "Doanh thu thuần của AAA năm 2014 (BCTC riêng) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_separate_extracted|270"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0008.csv",
+    "csv_path": "data/gold/evidence/q_0008.csv",
+    "pandas_query": "df[(df['canonical']=='Doanh thu thuần') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Doanh thu thuần"
+    },
+    "answer": 1531827001230.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0024",
+    "question": "Tiền và tương đương tiền của AAA năm 2014 (BCTC riêng) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_separate_extracted|200"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0024.csv",
+    "csv_path": "data/gold/evidence/q_0024.csv",
+    "pandas_query": "df[(df['canonical']=='Tiền và tương đương tiền') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Tiền và tương đương tiền"
+    },
+    "answer": 327833894721.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0056",
+    "question": "LNST của AAA năm 2015 tăng/giảm bao nhiêu VND so với năm 2014?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted",
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|277",
+      "AAA_financial_statements_2015_separate_extracted|270"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0056.csv",
+    "csv_path": "data/gold/evidence/q_0056.csv",
+    "pandas_query": "float(df[df['năm']==2015]['giá_trị'].iloc[0]) - float(df[df['năm']==2014]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "LNST",
+      "op": "yoy_diff"
+    },
+    "answer": 6977670503.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0060",
+    "question": "Nợ ngắn hạn của AAA năm 2015 tăng/giảm bao nhiêu VND so với năm 2014?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2016_consolidated_extracted",
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|1005",
+      "AAA_financial_statements_2016_consolidated_extracted|957"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0060.csv",
+    "csv_path": "data/gold/evidence/q_0060.csv",
+    "pandas_query": "float(df[df['năm']==2015]['giá_trị'].iloc[0]) - float(df[df['năm']==2014]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Nợ ngắn hạn",
+      "op": "yoy_diff"
+    },
+    "answer": 566748105908.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0130",
+    "question": "LNST của GVR so với HHS năm 2014 chênh lệch bao nhiêu VND (GVR − HHS)?",
+    "category": "company_compare",
+    "relevant_docs": [
+      "GVR_financial_statements_2015_consolidated_extracted",
+      "HHS_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "HHS_financial_statements_2015_consolidated_extracted|233",
+      "GVR_financial_statements_2015_consolidated_extracted|312"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0130.csv",
+    "csv_path": "data/gold/evidence/q_0130.csv",
+    "pandas_query": "float(df[df['company']=='GVR']['giá_trị'].iloc[0]) - float(df[df['company']=='HHS']['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "companies": [
+        "GVR",
+        "HHS"
+      ],
+      "year": 2014,
+      "canonical": "LNST"
+    },
+    "answer": 2161555622692.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0159",
+    "question": "Theo thuyết minh / chi tiết BCTC, Chi phí khấu hao của AAA năm 2021 là bao nhiêu VND?",
+    "category": "thuyet_minh",
+    "relevant_docs": [
+      "AAA_financial_statements_2021_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2021_separate_extracted|1258"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0159.csv",
+    "csv_path": "data/gold/evidence/q_0159.csv",
+    "pandas_query": "df[(df['canonical']=='Chi phí khấu hao') & (df['năm']==2021) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2021,
+      "canonical": "Chi phí khấu hao",
+      "note_proxy": true
+    },
+    "answer": 15069056856.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0051",
+    "question": "Chi phí bán hàng của AAA năm 2015 tăng/giảm bao nhiêu VND so với năm 2014?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|277"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0051.csv",
+    "csv_path": "data/gold/evidence/q_0051.csv",
+    "pandas_query": "float(df[df['năm']==2015]['giá_trị'].iloc[0]) - float(df[df['năm']==2014]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Chi phí bán hàng",
+      "op": "yoy_diff"
+    },
+    "answer": -3707733653.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0153",
+    "question": "Theo thuyết minh / chi tiết BCTC, Lợi nhuận sau thuế chưa phân phối của AAA năm 2018 là bao nhiêu VND?",
+    "category": "thuyet_minh",
+    "relevant_docs": [
+      "AAA_financial_statements_2018_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2018_separate_extracted|236"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0153.csv",
+    "csv_path": "data/gold/evidence/q_0153.csv",
+    "pandas_query": "df[(df['canonical']=='Lợi nhuận sau thuế chưa phân phối') & (df['năm']==2018) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2018,
+      "canonical": "Lợi nhuận sau thuế chưa phân phối",
+      "note_proxy": true
+    },
+    "answer": 265970088120.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0108",
+    "question": "Doanh thu thuần của CEO so với DBC năm 2014 chênh lệch bao nhiêu VND (CEO − DBC)?",
+    "category": "company_compare",
+    "relevant_docs": [
+      "DBC_financial_statements_2015_consolidated_extracted",
+      "CEO_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "CEO_financial_statements_2015_consolidated_extracted|250",
+      "DBC_financial_statements_2015_consolidated_extracted|1181"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0108.csv",
+    "csv_path": "data/gold/evidence/q_0108.csv",
+    "pandas_query": "float(df[df['company']=='CEO']['giá_trị'].iloc[0]) - float(df[df['company']=='DBC']['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "companies": [
+        "CEO",
+        "DBC"
+      ],
+      "year": 2014,
+      "canonical": "Doanh thu thuần"
+    },
+    "answer": -4737914011367.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0057",
+    "question": "Lưu chuyển tiền thuần từ HĐKD của AAA năm 2015 tăng/giảm bao nhiêu VND so với năm 2014?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|322"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0057.csv",
+    "csv_path": "data/gold/evidence/q_0057.csv",
+    "pandas_query": "float(df[df['năm']==2015]['giá_trị'].iloc[0]) - float(df[df['năm']==2014]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Lưu chuyển tiền thuần từ HĐKD",
+      "op": "yoy_diff"
+    },
+    "answer": -73044925737.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0115",
+    "question": "Doanh thu thuần của GVR so với HAG năm 2014 chênh lệch bao nhiêu VND (GVR − HAG)?",
+    "category": "company_compare",
+    "relevant_docs": [
+      "GVR_financial_statements_2015_consolidated_extracted",
+      "HAG_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "HAG_financial_statements_2015_consolidated_extracted|2108",
+      "GVR_financial_statements_2015_consolidated_extracted|312"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0115.csv",
+    "csv_path": "data/gold/evidence/q_0115.csv",
+    "pandas_query": "float(df[df['company']=='GVR']['giá_trị'].iloc[0]) - float(df[df['company']=='HAG']['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "companies": [
+        "GVR",
+        "HAG"
+      ],
+      "year": 2014,
+      "canonical": "Doanh thu thuần"
+    },
+    "answer": 17214616157028.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0072",
+    "question": "LNST của AAA năm 2016 tăng/giảm bao nhiêu VND so với năm 2015?",
+    "category": "calculation",
+    "relevant_docs": [
+      "AAA_financial_statements_2016_consolidated_extracted",
+      "AAA_financial_statements_2015_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2016_consolidated_extracted|272",
+      "AAA_financial_statements_2015_separate_extracted|270"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0072.csv",
+    "csv_path": "data/gold/evidence/q_0072.csv",
+    "pandas_query": "float(df[df['năm']==2016]['giá_trị'].iloc[0]) - float(df[df['năm']==2015]['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2016,
+      "canonical": "LNST",
+      "op": "yoy_diff"
+    },
+    "answer": 88166472007.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0002",
+    "question": "Chi phí bán hàng của AAA năm 2014 (BCTC riêng) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_separate_extracted|270"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0002.csv",
+    "csv_path": "data/gold/evidence/q_0002.csv",
+    "pandas_query": "df[(df['canonical']=='Chi phí bán hàng') & (df['năm']==2014) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2014,
+      "canonical": "Chi phí bán hàng"
+    },
+    "answer": 71314831656.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0041",
+    "question": "Hàng tồn kho của AAA năm 2015 (BCTC hợp nhất) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0041.csv",
+    "csv_path": "data/gold/evidence/q_0041.csv",
+    "pandas_query": "df[(df['canonical']=='Hàng tồn kho') & (df['năm']==2015) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Hàng tồn kho"
+    },
+    "answer": 214186555570.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0151",
+    "question": "Theo thuyết minh / chi tiết BCTC, Chi phí khấu hao của AAA năm 2018 là bao nhiêu VND?",
+    "category": "thuyet_minh",
+    "relevant_docs": [
+      "AAA_financial_statements_2018_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2018_separate_extracted|1379"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0151.csv",
+    "csv_path": "data/gold/evidence/q_0151.csv",
+    "pandas_query": "df[(df['canonical']=='Chi phí khấu hao') & (df['năm']==2018) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2018,
+      "canonical": "Chi phí khấu hao",
+      "note_proxy": true
+    },
+    "answer": 203229936739.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0088",
+    "question": "Tổng tài sản ngắn hạn + dài hạn của AAA năm 2015 là bao nhiêu VND?",
+    "category": "multi_table",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted",
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205",
+      "AAA_financial_statements_2015_separate_extracted|200"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0088.csv",
+    "csv_path": "data/gold/evidence/q_0088.csv",
+    "pandas_query": "float(df[df['canonical']=='Tài sản ngắn hạn']['giá_trị'].iloc[0]) + float(df[df['canonical']=='Tài sản dài hạn']['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "pair": [
+        "Tài sản ngắn hạn",
+        "Tài sản dài hạn"
+      ]
+    },
+    "answer": 2084401145016.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0138",
+    "question": "Theo thuyết minh / chi tiết BCTC, Lợi nhuận sau thuế chưa phân phối của AAA năm 2015 là bao nhiêu VND?",
+    "category": "thuyet_minh",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|230"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0138.csv",
+    "csv_path": "data/gold/evidence/q_0138.csv",
+    "pandas_query": "df[(df['canonical']=='Lợi nhuận sau thuế chưa phân phối') & (df['năm']==2015) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Lợi nhuận sau thuế chưa phân phối",
+      "note_proxy": true
+    },
+    "answer": 116439130668.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0040",
+    "question": "Doanh thu thuần của AAA năm 2015 (BCTC riêng) là bao nhiêu VND?",
+    "category": "simple_lookup",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_separate_extracted|270"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0040.csv",
+    "csv_path": "data/gold/evidence/q_0040.csv",
+    "pandas_query": "df[(df['canonical']=='Doanh thu thuần') & (df['năm']==2015) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "canonical": "Doanh thu thuần"
+    },
+    "answer": 1521961578921.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0147",
+    "question": "Theo thuyết minh / chi tiết BCTC, Chi phí nhân công của AAA năm 2017 là bao nhiêu VND?",
+    "category": "thuyet_minh",
+    "relevant_docs": [
+      "AAA_financial_statements_2018_separate_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2018_separate_extracted|1379"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0147.csv",
+    "csv_path": "data/gold/evidence/q_0147.csv",
+    "pandas_query": "df[(df['canonical']=='Chi phí nhân công') & (df['năm']==2017) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2017,
+      "canonical": "Chi phí nhân công",
+      "note_proxy": true
+    },
+    "answer": 160487563050.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0087",
+    "question": "Tiền + Hàng tồn kho của AAA năm 2015 là bao nhiêu VND?",
+    "category": "multi_table",
+    "relevant_docs": [
+      "AAA_financial_statements_2015_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2015_consolidated_extracted|205"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0087.csv",
+    "csv_path": "data/gold/evidence/q_0087.csv",
+    "pandas_query": "float(df[df['canonical']=='Tiền và tương đương tiền']['giá_trị'].iloc[0]) + float(df[df['canonical']=='Hàng tồn kho']['giá_trị'].iloc[0])",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2015,
+      "pair": [
+        "Tiền và tương đương tiền",
+        "Hàng tồn kho"
+      ]
+    },
+    "answer": 684248273690.0,
+    "verified_by_execution": true
+  },
+  {
+    "question_id": "q_0154",
+    "question": "Theo thuyết minh / chi tiết BCTC, Thuế và các khoản phải nộp Nhà nước của AAA năm 2018 là bao nhiêu VND?",
+    "category": "thuyet_minh",
+    "relevant_docs": [
+      "AAA_financial_statements_2018_consolidated_extracted"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2018_consolidated_extracted|301"
+    ],
+    "evidence_csv": "data/gold/evidence/q_0154.csv",
+    "csv_path": "data/gold/evidence/q_0154.csv",
+    "pandas_query": "df[(df['canonical']=='Thuế và các khoản phải nộp Nhà nước') & (df['năm']==2018) & (df['company']=='AAA')]['giá_trị'].iloc[0]",
+    "unit": "VND",
+    "meta": {
+      "company": "AAA",
+      "year": 2018,
+      "canonical": "Thuế và các khoản phải nộp Nhà nước",
+      "note_proxy": true
+    },
+    "answer": -46142737521.0,
+    "verified_by_execution": true
+  }
+]

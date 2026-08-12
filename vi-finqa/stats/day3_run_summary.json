@@ -1,0 +1,9 @@
+{
+  "n_files": 1973,
+  "n_processed_this_run": 1973,
+  "n_done_total": 1973,
+  "n_tables_written": 125192,
+  "n_empty_files": 8,
+  "elapsed_sec": 41.75,
+  "out_path": "data\\extracted\\metadata.jsonl"
+}

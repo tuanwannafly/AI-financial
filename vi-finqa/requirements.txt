@@ -1,0 +1,11 @@
+pandas
+numpy
+regex
+tqdm
+datasets
+huggingface_hub
+rapidfuzz
+pyyaml
+jsonlines
+joblib
+anthropic

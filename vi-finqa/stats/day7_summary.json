@@ -1,0 +1,10 @@
+{
+  "report_exists": true,
+  "final_status_exists": true,
+  "report_has_metrics": true,
+  "backup_exists": true,
+  "pass": true,
+  "backup_files": [
+    "backups\\week1_20260812.tar.gz"
+  ]
+}

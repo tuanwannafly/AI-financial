@@ -1,0 +1,234 @@
+Doanh thu thuần:
+  aliases:
+    - "Doanh thu bán hàng và cung cấp dịch vụ"
+    - "Net revenue"
+    - "Doanh thu thuần về BH và CCDV"
+    - "Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+    - "Doanh thu bán hàng và cung cấp dịch vụ và doanh thu hoạt động tài chính"
+  category: "Kết quả kinh doanh"
+Doanh thu bán hàng và cung cấp dịch vụ:
+  canonical: "Doanh thu thuần"
+  aliases:
+    - "Doanh thu bán hàng và cung cấp dịch vụ"
+  category: "Kết quả kinh doanh"
+Doanh thu tài chính:
+  aliases:
+    - "Doanh thu hoạt động tài chính"
+    - "Lãi tiền gửi, tiền cho vay"
+    - "Lãi tiền gửi"
+    - "Lãi tiền vay"
+  category: "Kết quả kinh doanh"
+Chi phí tài chính:
+  aliases:
+    - "Chi phí hoạt động tài chính"
+    - "Chi phí lãi vay"
+    - "Chi phí lãi tiền vay"
+    - "Lãi vay phải trả"
+    - "Chi phí lãi và các chi phí tương tự"
+  category: "Kết quả kinh doanh"
+Chi phí bán hàng:
+  aliases:
+    - "Chi phí bán hàng và chi phí quản lý doanh nghiệp"
+  category: "Kết quả kinh doanh"
+Chi phí quản lý doanh nghiệp:
+  aliases:
+    - "Chi phí quản lý"
+  category: "Kết quả kinh doanh"
+Lợi nhuận gộp:
+  aliases:
+    - "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+    - "Lợi nhuận gộp từ bán hàng và cung cấp dịch vụ"
+  category: "Kết quả kinh doanh"
+Lợi nhuận trước thuế:
+  aliases:
+    - "Lợi nhuận kế toán trước thuế"
+    - "Tổng lợi nhuận kế toán trước thuế"
+    - "Lợi nhuận trước thuế thu nhập doanh nghiệp"
+    - "Lợi nhuận kế toán trước thuế thu nhập doanh nghiệp"
+  category: "Kết quả kinh doanh"
+LNST:
+  aliases:
+    - "Lợi nhuận sau thuế"
+    - "Lợi nhuận sau thuế thu nhập doanh nghiệp"
+    - "Net profit after tax"
+    - "Lợi nhuận thuần sau thuế"
+    - "Lợi nhuận sau thuế thu nhập doanh nghiệp của công ty mẹ"
+  category: "Kết quả kinh doanh"
+Giá vốn hàng bán:
+  aliases:
+    - "Giá vốn hàng bán và dịch vụ cung cấp"
+    - "Giá vốn hàng hóa"
+    - "Giá vốn hàng bán, dịch vụ cung cấp"
+    - "Tổng giá vốn hàng bán"
+    - "Tổng giá vốn hàng bán và dịch vụ cung cấp"
+  category: "Kết quả kinh doanh"
+Thuế thu nhập doanh nghiệp:
+  aliases:
+    - "Chi phí thuế thu nhập doanh nghiệp"
+    - "Chi phí thuế thu nhập hiện hành"
+    - "Chi phí thuế hiện hành"
+    - "Thuế thu nhập doanh nghiệp"
+    - "Chi phí thuế TNDN"
+  category: "Kết quả kinh doanh"
+Tài sản ngắn hạn:
+  aliases:
+    - "TSNH"
+    - "Current assets"
+    - "A. Tài sản ngắn hạn"
+  category: "Cân đối kế toán"
+  children:
+    - "Tiền và tương đương tiền"
+    - "Đầu tư tài chính ngắn hạn"
+    - "Hàng tồn kho"
+Tài sản dài hạn:
+  aliases:
+    - "TSDH"
+    - "Non-current assets"
+    - "B. Tài sản dài hạn"
+  category: "Cân đối kế toán"
+Tổng tài sản:
+  aliases:
+    - "Tổng cộng tài sản"
+    - "Total assets"
+    - "TỔNG CỘNG TÀI SẢN"
+  category: "Cân đối kế toán"
+Tiền và tương đương tiền:
+  aliases:
+    - "Tiền và các khoản tương đương tiền"
+    - "Cash and cash equivalents"
+    - "I. Tiền và các khoản tương đương tiền"
+    - "I. Tiền và tương đương tiền"
+  category: "Cân đối kế toán"
+  children:
+    - "Tiền"
+    - "Các khoản tương đương tiền"
+Tiền:
+  aliases:
+    - "Tiền mặt"
+    - "Tiền gửi ngân hàng"
+  category: "Cân đối kế toán"
+Đầu tư tài chính ngắn hạn:
+  aliases:
+    - "Đầu tư tài chính ngắn hạn"
+    - "Chứng khoán kinh doanh"
+    - "Chứng khoán nợ"
+    - "Chứng khoán đầu tư sẵn sàng để bán"
+  category: "Cân đối kế toán"
+Phải thu ngắn hạn:
+  aliases:
+    - "Phải thu ngắn hạn"
+    - "Phải thu khách hàng"
+    - "Phải thu khách hàng và phải thu khác"
+    - "Phải thu khách hàng trong nước"
+    - "Tổng phải thu ngắn hạn khác"
+    - "Số dư phải thu khác ngắn hạn"
+  category: "Cân đối kế toán"
+Hàng tồn kho:
+  aliases:
+    - "Inventory"
+    - "Tổng giá trị hàng tồn kho"
+    - "Tổng hàng tồn kho"
+  category: "Cân đối kế toán"
+Nợ phải trả:
+  aliases:
+    - "Tổng nợ phải trả"
+    - "Total liabilities"
+    - "C. Nợ phải trả"
+    - "C. NỘ PHẢI TRẢ"
+  category: "Cân đối kế toán"
+Nợ ngắn hạn:
+  aliases:
+    - "Nợ ngắn hạn"
+    - "I. Nợ ngắn hạn"
+    - "Vay và nợ thuê tài chính ngắn hạn"
+    - "Vay ngắn hạn"
+    - "Số dư vay ngắn hạn"
+    - "Phải trả người bán ngắn hạn"
+    - "Phải trả người bán"
+  category: "Cân đối kế toán"
+Nợ dài hạn:
+  aliases:
+    - "Nợ dài hạn"
+    - "II. Nợ dài hạn"
+    - "Vay dài hạn"
+    - "Vay và nợ thuê tài chính dài hạn"
+    - "Trái phiếu dài hạn"
+    - "Số dư trái phiếu đặc biệt"
+  category: "Cân đối kế toán"
+Vốn chủ sở hữu:
+  aliases:
+    - "VCSH"
+    - "Equity"
+    - "B. Vốn chủ sở hữu"
+    - "Tổng cộng vốn chủ sở hữu"
+    - "Vốn chủ sở hữu của chủ sở hữu công ty mẹ"
+  category: "Cân đối kế toán"
+  children:
+    - "Vốn góp của chủ sở hữu"
+    - "Vốn cổ phần"
+    - "Vốn điều lệ"
+    - "Lợi nhuận sau thuế chưa phân phối"
+Vốn góp của chủ sở hữu:
+  aliases:
+    - "Vốn đầu tư của chủ sở hữu"
+    - "Vốn góp của chủ sở hữu"
+  category: "Cân đối kế toán"
+Vốn cổ phần:
+  aliases:
+    - "Vốn cổ phần đã phát hành"
+    - "Vốn điều lệ"
+    - "Tổng số lượng cổ phần"
+  category: "Cân đối kế toán"
+Lợi nhuận sau thuế chưa phân phối:
+  aliases:
+    - "Lợi nhuận sau thuế chưa phân phối"
+    - "LNST chưa phân phối"
+  category: "Cân đối kế toán"
+Lưu chuyển tiền thuần từ HĐKD:
+  aliases:
+    - "Lưu chuyển tiền thuần từ hoạt động kinh doanh"
+    - "Tiền và các khoản tương đương tiền đầu kỳ"
+    - "Lưu chuyển tiền thuần trong kỳ"
+    - "Lưu chuyển tiền thuần từ hoạt động kinh doanh của công ty mẹ"
+  category: "Lưu chuyển tiền tệ"
+Lưu chuyển tiền thuần từ HĐĐT:
+  aliases:
+    - "Lưu chuyển tiền thuần từ hoạt động đầu tư"
+    - "Tiền và các khoản tương đương tiền cuối kỳ"
+    - "Chi phí xây dựng cơ bản dở dang"
+  category: "Lưu chuyển tiền tệ"
+Lưu chuyển tiền thuần từ HĐTC:
+  aliases:
+    - "Lưu chuyển tiền thuần từ hoạt động tài chính"
+  category: "Lưu chuyển tiền tệ"
+Chi phí nhân công:
+  aliases:
+    - "Chi phí nhân công"
+    - "Chi phí lương và các khoản khác theo lương"
+    - "Tổng quỹ lương"
+  category: "Thuyết minh"
+Chi phí khấu hao:
+  aliases:
+    - "Khấu hao tài sản cố định"
+    - "Chi phí khấu hao TSCĐ"
+    - "Khấu hao TSCĐ"
+  category: "Thuyết minh"
+Thuế và các khoản phải nộp Nhà nước:
+  aliases:
+    - "Thuế và các khoản phải nộp Nhà nước"
+    - "Thuế TNDN phải nộp"
+    - "Thuế thu nhập doanh nghiệp phải nộp"
+    - "Thuế thu nhập doanh nghiệp phải trả"
+    - "Số dư thuế thu nhập doanh nghiệp phải trả"
+  category: "Cân đối kế toán"
+ROE:
+  formula: "LNST / Vốn chủ sở hữu bình quân"
+  category: "Chỉ số tài chính"
+ROA:
+  formula: "LNST / Tổng tài sản bình quân"
+  category: "Chỉ số tài chính"
+EPS:
+  aliases:
+    - "Lãi cơ bản trên cổ phiếu"
+    - "Earnings per share"
+  category: "Chỉ số tài chính"

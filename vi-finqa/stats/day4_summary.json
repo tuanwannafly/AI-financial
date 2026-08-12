@@ -1,0 +1,13 @@
+{
+  "ontology_exists": true,
+  "metadata_exists": true,
+  "normalized_exists": true,
+  "review_exists": true,
+  "long_exists": true,
+  "n_metadata": 125192,
+  "n_normalized": 157468,
+  "n_mapped": 2828,
+  "n_review": 144743,
+  "n_long_rows": 332038,
+  "pass": true
+}
