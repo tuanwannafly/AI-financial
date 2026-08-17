@@ -1,29 +1,50 @@
+# ===== Python =====
 __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
 venv/
+env/
+
+# ===== Environment / secrets =====
 .env
 .DS_Store
 
-# Raw HF dump (re-downloadable)
+# ===== Raw HF dump (re-downloadable) =====
 data/raw/
 
-# Large extraction / processed artifacts (regenerate locally)
+# ===== Large extraction / processed artifacts (regenerate locally) =====
 data/extracted/
 data/processed/
+data/retrieval_index/
 *.jsonl
 
-# Gold evidence bulk + sample zip (keep gold_set JSON only in git)
+# ===== Gold evidence bulk + sample zip (keep gold_set JSON only in git) =====
 data/gold/evidence/
+data/gold/evidence_official/
 data/gold/sample_submission.zip
 
-# Runtime / backups
+# ===== Synthetic data bulk (regenerate via src/synthetic) =====
+data/synthetic/
+
+# ===== Text2pandas intermediate JSON (regenerate) =====
+data/text2pandas/
+
+# ===== Runtime / backups / heavy artifacts =====
 checkpoints/
 logs/
 backups/
+frozen/
 *.tar.gz
 *.zip
+*.pkl
+*.parquet
 
-# Keep small JSON stats/status in repo; ignore heavy caches
+# ===== Submissions (generated outputs, not source) =====
+submissions/
+
+# ===== Jupyter checkpoints =====
+.ipynb_checkpoints/
+
+# ===== Keep small JSON stats/status in repo; ignore heavy caches =====
 .cache/

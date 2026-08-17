@@ -11,20 +11,42 @@ Doanh thu bán hàng và cung cấp dịch vụ:
   aliases:
     - "Doanh thu bán hàng và cung cấp dịch vụ"
   category: "Kết quả kinh doanh"
+# Specific sub-items are kept separate so the matcher can distinguish them from
+# their aggregate parent category.  Without this, ``Lãi tiền gửi`` was being
+# collapsed into ``Doanh thu tài chính`` and the official packer retrieved the
+# wrong table, driving retrieval F2 toward zero on the public leaderboard.
+Lãi tiền gửi:
+  aliases:
+    - "Lãi tiền gửi, tiền cho vay"
+    - "Lãi tiền gởi"
+    - "Lãi tiền gửi ngân hàng"
+  category: "Kết quả kinh doanh"
+Lãi tiền vay:
+  aliases:
+    - "Lãi cho vay"
+  category: "Kết quả kinh doanh"
+Chi phí lãi vay:
+  aliases:
+    - "Chi phí lãi tiền vay"
+    - "Lãi vay phải trả"
+    - "Chi phí lãi và các chi phí tương tự"
+    - "Chi phí lãi vay phải trả"
+    - "Chi phí lãi vay"
+  category: "Kết quả kinh doanh"
+Chi phí phạt:
+  aliases:
+    - "Chi phí phạt thuế"
+    - "Tiền phạt"
+    - "Phạt vi phạm hành chính"
+    - "Phạt chậm nộp thuế"
+  category: "Kết quả kinh doanh"
 Doanh thu tài chính:
   aliases:
     - "Doanh thu hoạt động tài chính"
-    - "Lãi tiền gửi, tiền cho vay"
-    - "Lãi tiền gửi"
-    - "Lãi tiền vay"
   category: "Kết quả kinh doanh"
 Chi phí tài chính:
   aliases:
     - "Chi phí hoạt động tài chính"
-    - "Chi phí lãi vay"
-    - "Chi phí lãi tiền vay"
-    - "Lãi vay phải trả"
-    - "Chi phí lãi và các chi phí tương tự"
   category: "Kết quả kinh doanh"
 Chi phí bán hàng:
   aliases:
@@ -33,6 +55,7 @@ Chi phí bán hàng:
 Chi phí quản lý doanh nghiệp:
   aliases:
     - "Chi phí quản lý"
+    - "Chi phí quản lý doanh nghiệp năm"
   category: "Kết quả kinh doanh"
 Lợi nhuận gộp:
   aliases:
@@ -69,6 +92,7 @@ Thuế thu nhập doanh nghiệp:
     - "Chi phí thuế hiện hành"
     - "Thuế thu nhập doanh nghiệp"
     - "Chi phí thuế TNDN"
+    - "Chi phí thuế hiện hành trong năm"
   category: "Kết quả kinh doanh"
 Tài sản ngắn hạn:
   aliases:
@@ -92,6 +116,11 @@ Tổng tài sản:
     - "Total assets"
     - "TỔNG CỘNG TÀI SẢN"
   category: "Cân đối kế toán"
+Tổng tài sản đầu kỳ:
+  aliases:
+    - "Tổng tài sản đầu năm"
+    - "Tổng tài sản đầu kỳ"
+  category: "Cân đối kế toán"
 Tiền và tương đương tiền:
   aliases:
     - "Tiền và các khoản tương đương tiền"
@@ -106,6 +135,7 @@ Tiền:
   aliases:
     - "Tiền mặt"
     - "Tiền gửi ngân hàng"
+    - "Số dư tiền mặt"
   category: "Cân đối kế toán"
 Đầu tư tài chính ngắn hạn:
   aliases:
@@ -122,6 +152,7 @@ Phải thu ngắn hạn:
     - "Phải thu khách hàng trong nước"
     - "Tổng phải thu ngắn hạn khác"
     - "Số dư phải thu khác ngắn hạn"
+    - "Số tiền phải thu từ khách hàng khác"
   category: "Cân đối kế toán"
 Hàng tồn kho:
   aliases:
@@ -146,6 +177,12 @@ Nợ ngắn hạn:
     - "Phải trả người bán ngắn hạn"
     - "Phải trả người bán"
   category: "Cân đối kế toán"
+Vay ngắn hạn:
+  aliases:
+    - "Vay ngắn hạn"
+    - "Số dư vay ngắn hạn"
+    - "Vay ngắn hạn của công ty"
+  category: "Cân đối kế toán"
 Nợ dài hạn:
   aliases:
     - "Nợ dài hạn"
@@ -162,27 +199,53 @@ Vốn chủ sở hữu:
     - "B. Vốn chủ sở hữu"
     - "Tổng cộng vốn chủ sở hữu"
     - "Vốn chủ sở hữu của chủ sở hữu công ty mẹ"
+    - "Tổng vốn chủ sở hữu"
   category: "Cân đối kế toán"
   children:
     - "Vốn góp của chủ sở hữu"
     - "Vốn cổ phần"
+    - "Vốn cổ phần đã phát hành"
     - "Vốn điều lệ"
     - "Lợi nhuận sau thuế chưa phân phối"
 Vốn góp của chủ sở hữu:
   aliases:
     - "Vốn đầu tư của chủ sở hữu"
     - "Vốn góp của chủ sở hữu"
+    - "Tổng vốn góp của chủ sở hữu"
   category: "Cân đối kế toán"
 Vốn cổ phần:
   aliases:
-    - "Vốn cổ phần đã phát hành"
+    - "Tổng số lượng cổ phiếu"
+    - "Mệnh giá cổ phần"
+    - "Số dư vốn cổ phần"
+  category: "Cân đối kế toán"
+Vốn cổ phần đã phát hành:
+  aliases:
     - "Vốn điều lệ"
-    - "Tổng số lượng cổ phần"
+    - "Số cổ phần đã phát hành"
+    - "Tổng số cổ phần đã phát hành"
+    - "Cổ phiếu phổ thông"
+    - "Cổ phiếu ưu đãi"
+    - "Cổ phiếu phổ thông đã phát hành"
+    - "Cổ phiếu ưu đãi đã phát hành"
   category: "Cân đối kế toán"
 Lợi nhuận sau thuế chưa phân phối:
   aliases:
     - "Lợi nhuận sau thuế chưa phân phối"
     - "LNST chưa phân phối"
+    - "Lợi nhuận chưa phân phối"
+    - "Lợi nhuận sau thuế chưa phân phối cuối năm"
+    - "Lợi nhuận sau thuế chưa phân phối cuối kỳ"
+    - "Lợi nhuận sau thuế chưa phân phối đầu năm"
+    - "Lợi nhuận sau thuế chưa phân phối đầu kỳ"
+  category: "Cân đối kế toán"
+Quỹ khen thưởng phúc lợi:
+  aliases:
+    - "Quỹ khen thưởng, phúc lợi"
+    - "Quỹ khen thưởng và phúc lợi"
+    - "Quỹ khen thưởng"
+    - "Quỹ phúc lợi"
+    - "Quỹ khen thưởng phúc lợi cuối năm"
   category: "Cân đối kế toán"
 Lưu chuyển tiền thuần từ HĐKD:
   aliases:
@@ -195,7 +258,6 @@ Lưu chuyển tiền thuần từ HĐĐT:
   aliases:
     - "Lưu chuyển tiền thuần từ hoạt động đầu tư"
     - "Tiền và các khoản tương đương tiền cuối kỳ"
-    - "Chi phí xây dựng cơ bản dở dang"
   category: "Lưu chuyển tiền tệ"
 Lưu chuyển tiền thuần từ HĐTC:
   aliases:
@@ -206,12 +268,16 @@ Chi phí nhân công:
     - "Chi phí nhân công"
     - "Chi phí lương và các khoản khác theo lương"
     - "Tổng quỹ lương"
+    - "Chi phí lương"
+    - "Chi phí nhân viên"
   category: "Thuyết minh"
 Chi phí khấu hao:
   aliases:
     - "Khấu hao tài sản cố định"
     - "Chi phí khấu hao TSCĐ"
     - "Khấu hao TSCĐ"
+    - "Chi phí khấu hao và hao mòn"
+    - "Khấu hao và hao mòn"
   category: "Thuyết minh"
 Thuế và các khoản phải nộp Nhà nước:
   aliases:
@@ -221,6 +287,65 @@ Thuế và các khoản phải nộp Nhà nước:
     - "Thuế thu nhập doanh nghiệp phải trả"
     - "Số dư thuế thu nhập doanh nghiệp phải trả"
   category: "Cân đối kế toán"
+# Bank / credit-institution (TCTD) rows that frequently appear in the public
+# questions for ACB, BID, CTG, STB, VCB, ...
+Cho vay khách hàng:
+  aliases:
+    - "Số dư cho vay khách hàng"
+    - "Dư nợ cho vay khách hàng"
+    - "Cho vay khách hàng ngành"
+  category: "Cân đối kế toán"
+Dự phòng rủi ro cho vay khách hàng:
+  aliases:
+    - "Dự phòng rủi ro tín dụng"
+    - "Dự phòng cho vay khách hàng"
+    - "Chi phí dự phòng rủi ro tín dụng"
+    - "Chi phí dự phòng"
+    - "Dự phòng tổn thất các khoản cho vay"
+  category: "Kết quả kinh doanh"
+Tiền gửi tại các TCTD khác:
+  aliases:
+    - "Tiền gửi tại các TCTD"
+    - "Tiền gửi tại các tổ chức tín dụng khác"
+    - "Tiền gửi tại ngân hàng"
+  category: "Cân đối kế toán"
+Tiền gửi của khách hàng:
+  aliases:
+    - "Tiền gửi khách hàng"
+    - "Tiền gửi của khách hàng"
+  category: "Cân đối kế toán"
+# EPS / share count rows used in per-share calculations
+Bình quân gia quyền cổ phiếu:
+  aliases:
+    - "Bình quân gia quyền của số cổ phiếu phổ thông để tính lãi cơ bản trên cổ phiếu"
+    - "Số cổ phiếu phổ thông bình quân"
+    - "Cổ phiếu phổ thông bình quân"
+  category: "Chỉ số tài chính"
+Phải trả các bên liên quan:
+  aliases:
+    - "Phải trả bên liên quan"
+    - "Vay ngắn hạn phải trả các bên liên quan"
+    - "Vay dài hạn phải trả các bên liên quan"
+  category: "Cân đối kế toán"
+Phải thu các bên liên quan:
+  aliases:
+    - "Phải thu bên liên quan"
+  category: "Cân đối kế toán"
+Chi phí khác:
+  aliases:
+    - "Chi phí khác (VND)"
+    - "Chi phí hoạt động khác"
+  category: "Kết quả kinh doanh"
+Thu nhập khác:
+  aliases:
+    - "Thu nhập khác (VND)"
+    - "Thu nhập hoạt động khác"
+    - "Thu nhập từ hoạt động khác"
+  category: "Kết quả kinh doanh"
+Doanh thu hoạt động khác:
+  aliases:
+    - "Doanh thu khác"
+  category: "Kết quả kinh doanh"
 ROE:
   formula: "LNST / Vốn chủ sở hữu bình quân"
   category: "Chỉ số tài chính"
@@ -232,3 +357,149 @@ EPS:
     - "Lãi cơ bản trên cổ phiếu"
     - "Earnings per share"
   category: "Chỉ số tài chính"
+# Bank / credit-institution (TCTD) - extended specific items frequently used in the
+# public questions.  Each gets its own canonical so granular aliases do not collapse
+# into aggregates (e.g. "Dư nợ đủ tiêu chuẩn" would otherwise match the broader
+# "Cho vay khách hàng" and the official packer would retrieve the wrong table).
+Cho vay trung hạn:
+  aliases:
+    - "Số dư cho vay trung hạn"
+  category: "Ngân hàng"
+Tiền gửi tiết kiệm:
+  aliases:
+    - "Tiền gửi tiết kiệm bằng VND"
+    - "Tiền gửi tiết kiệm"
+  category: "Ngân hàng"
+Dư nợ đủ tiêu chuẩn:
+  aliases:
+    - "Dư nợ đủ tiêu chuẩn"
+  category: "Ngân hàng"
+Cam kết giao dịch hối đoái:
+  aliases:
+    - "Số dư Cam kết giao dịch hối đoái"
+    - "Cam kết giao dịch hối đoái"
+  category: "Ngân hàng"
+Kỳ phiếu, trái phiếu trung hạn:
+  aliases:
+    - "Số dư kỳ phiếu, trái phiếu trung hạn bằng đồng nội tệ"
+    - "Kỳ phiếu, trái phiếu trung hạn"
+    - "Kỳ phiếu, trái phiếu"
+  category: "Ngân hàng"
+Phải thu về cho vay dài hạn:
+  aliases:
+    - "Tổng số dư phải thu về cho vay dài hạn"
+    - "Phải thu về cho vay dài hạn"
+  category: "Ngân hàng"
+# Compensation, allowances and board remuneration items
+Thù lao HĐQT:
+  aliases:
+    - "Thù lao của thành viên HĐQT"
+    - "Thù lao của thành viên HDQT"
+    - "Tiền thù lao của thành viên HĐQT"
+    - "Tiền thù lao"
+    - "Thù lao HĐQT"
+  category: "Thuyết minh"
+# Off-balance-sheet / lease commitments
+Cam kết cho thuê hoạt động:
+  aliases:
+    - "Tổng cam kết cho thuê hoạt động"
+    - "Cam kết cho thuê hoạt động"
+  category: "Thuyết minh"
+# Service / outsourced cost items
+Chi phí dịch vụ mua ngoài:
+  aliases:
+    - "Chi phí dịch vụ mua ngoài"
+  category: "Kết quả kinh doanh"
+# Investments in associates book value
+Giá trị ghi sổ đầu tư vào công ty liên kết:
+  aliases:
+    - "Tổng giá trị ghi sổ đầu tư vào công ty liên kết"
+    - "Giá trị ghi sổ đầu tư vào công ty liên kết"
+  category: "Cân đối kế toán"
+# Right-of-use land for banks
+Quyền sử dụng đất:
+  aliases:
+    - "Giá trị còn lại của quyền sử dụng đất"
+    - "Quyền sử dụng đất"
+  category: "TSCĐ vô hình"
+# Construction in progress (CIP), broken out from the broad CF-from-investing alias
+Chi phí xây dựng cơ bản dở dang:
+  aliases:
+    - "Tổng chi phí xây dựng cơ bản dở dang"
+    - "Chi phí xây dựng cơ bản dở dang"
+    - "Xây dựng cơ bản dở dang"
+  category: "TSCĐ"
+# Equity-side aggregates starting with "Tổng cộng" prefix
+Tổng cộng nguồn vốn:
+  aliases:
+    - "Tổng cộng nguồn vốn"
+    - "Tổng nguồn vốn"
+  category: "Cân đối kế toán"
+Tổng cộng tài sản đầu kỳ:
+  aliases:
+    - "Tổng cộng tài sản đầu năm"
+    - "Tổng cộng tài sản đầu kỳ"
+  category: "Cân đối kế toán"
+# Cash-advance / supplier prepayment items
+Trả trước cho người bán:
+  aliases:
+    - "Số dư trả trước cho người bán"
+    - "Trả trước cho người bán"
+    - "Tổng trả trước cho người bán"
+    - "Tổng số trả trước cho người bán dài hạn"
+  category: "Cân đối kế toán"
+Trả trước cho người bán ngắn hạn:
+  aliases:
+    - "Tổng tiền trả trước cho người bán ngắn hạn"
+    - "Trả trước cho người bán ngắn hạn"
+  category: "Cân đối kế toán"
+# Receivables book value
+Nợ phải thu:
+  aliases:
+    - "Tổng giá gốc nợ phải thu"
+    - "Nợ phải thu"
+  category: "Cân đối kế toán"
+# Net profit (current-year) variant
+Lợi nhuận thuần trong năm:
+  aliases:
+    - "Lợi nhuận thuần trong năm"
+  category: "Kết quả kinh doanh"
+# Foreign-currency cash balances
+Ngoại tệ USD:
+  aliases:
+    - "Số dư ngoại tệ USD"
+    - "Ngoại tệ USD"
+  category: "Thuyết minh"
+# Fixed assets held under finance leases
+Nguyên giá TSCĐ thuê tài chính:
+  aliases:
+    - "Nguyên giá tài sản cố định thuê tài chính"
+    - "Nguyên giá TSCĐ thuê tài chính"
+  category: "TSCĐ"
+# Outstanding / circulating share count
+Số lượng cổ phiếu đang lưu hành:
+  aliases:
+    - "Số lượng cổ phiếu đang lưu hành"
+    - "Cổ phiếu đang lưu hành"
+  category: "Vốn cổ phần"
+# Intangible assets net book value
+Giá trị còn lại của tài sản vô hình:
+  aliases:
+    - "Giá trị còn lại của tài sản vô hình"
+  category: "TSCĐ vô hình"
+# Ownership / voting percentages (used in sub-questions like "Tỷ lệ sở hữu ...")
+Tỷ lệ sở hữu:
+  aliases:
+    - "Tỷ lệ sở hữu tại công ty"
+    - "Tỷ lệ sở hữu trên vốn thực góp"
+    - "Tỷ lệ lợi ích kinh tế"
+    - "Tổng tỷ lệ quyền biểu quyết"
+    - "Tỷ lệ biểu quyết"
+  category: "Thuyết minh"
+# VAT payable (parent: Thuế và các khoản phải nộp Nhà nước)
+Thuế GTGT phải nộp:
+  aliases:
+    - "Số dư thuế giá trị gia tăng phải nộp"
+    - "Thuế giá trị gia tăng phải nộp"
+    - "Thuế GTGT phải nộp"
+  category: "Cân đối kế toán"

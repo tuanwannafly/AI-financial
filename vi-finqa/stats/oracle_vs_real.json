@@ -1,0 +1,27 @@
+{
+  "oracle": {
+    "exec_rate": 1.0,
+    "first_try_answer_acc": 0.5125,
+    "n": 160,
+    "serializer": "markdown"
+  },
+  "oracle_repaired": {
+    "exec_rate": 1.0,
+    "first_try_answer_acc": 0.5125,
+    "n": 160
+  },
+  "real_e2e": {
+    "rates": {
+      "ok": 0.725,
+      "retrieval_miss": 0.19375,
+      "execution_fail_unrepaired": 0.0,
+      "unit_mismatch": 0.0,
+      "generation_wrong_logic": 0.08125
+    },
+    "f2": 0.3178648378319326,
+    "exec_acc": 0.94375,
+    "answer_acc": 0.8625,
+    "n": 160
+  },
+  "gap_answer_acc": 0.3500000000000001
+}
