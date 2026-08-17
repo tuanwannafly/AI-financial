@@ -1,0 +1,36 @@
+lookup_simple:
+  desc: "Giá trị 1 chỉ tiêu, 1 năm, 1 công ty"
+  example: "Doanh thu thuần của {company} năm {year} là bao nhiêu?"
+compare_2years:
+  desc: "So sánh tuyệt đối/% giữa 2 năm"
+  example: "{metric} của {company} tăng bao nhiêu % từ {year1} sang {year2}?"
+ratio_structure:
+  desc: "Tỷ lệ / cơ cấu (vd TSNH/Tổng TS)"
+  example: "Tài sản ngắn hạn chiếm bao nhiêu % tổng tài sản của {company} năm {year}?"
+financial_index:
+  desc: "ROE, ROA, biên lợi nhuận, vòng quay..."
+  example: "ROE của {company} năm {year} là bao nhiêu?"
+multi_year_trend:
+  desc: "Xu hướng nhiều năm / CAGR"
+  example: "CAGR doanh thu của {company} giai đoạn {year1}-{year2}?"
+multi_table:
+  desc: "Kết hợp CĐKT + KQKD (vd vòng quay tổng tài sản)"
+  example: "Vòng quay tổng tài sản của {company} năm {year}?"
+compare_companies:
+  desc: "So sánh 2 công ty cùng chỉ tiêu"
+  example: "So sánh LNST giữa {company1} và {company2} năm {year}?"
+notes_qa:
+  desc: "Câu hỏi thuyết minh / ghi chú"
+  example: "Thuyết minh nêu gì về khoản mục {item} của {company} năm {year}?"
+unit_rounding:
+  desc: "Đơn vị / làm tròn / số âm"
+  example: "{metric} của {company} năm {year} là bao nhiêu tỷ đồng (làm tròn 1 chữ số)?"
+negative_edge_case:
+  desc: "Chỉ tiêu có giá trị âm (lỗ, dòng tiền âm...)"
+  example: "{company} có lỗ trong năm {year} không, nếu có thì bao nhiêu?"
+yoy_abs_diff:
+  desc: "Chênh lệch tuyệt đối cùng chỉ tiêu giữa 2 năm liền kề"
+  example: "{metric} của {company} năm {year} tăng/giảm bao nhiêu so với năm trước?"
+sum_two_metrics:
+  desc: "Tổng hai chỉ tiêu cùng công ty-năm"
+  example: "Tổng nợ ngắn hạn và nợ dài hạn của {company} năm {year}?"

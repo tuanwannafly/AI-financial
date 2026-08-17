@@ -1,4 +1,112 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+develop-eggs/
+.installed.cfg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
 
+# ===== Virtual environments =====
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
 
-#Ignore vscode AI rules
-.github\instructions\codacy.instructions.md
+# ===== Environment / secrets =====
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# ===== IDE / Editor =====
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ===== OS =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ===== Kilo / agent tooling (local only) =====
+.kilo/
+.kilocode/
+.opencode/
+.agents/cache/
+
+# ===== Scratch / temporary analysis (root) =====
+_scratch_*.py
+_scratch_*/
+_scratch_*.csv
+_scratch_*.json
+tmp/
+temp/
+*.tmp
+*.bak
+*.log
+
+# ===== Large data & binary artifacts (regenerate / downloadable) =====
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+*.pkl
+*.pickle
+*.parquet
+*.feather
+*.npy
+*.npz
+*.h5
+*.bin
+
+# ===== Jupyter checkpoints =====
+.ipynb_checkpoints/
+
+# ===== Node (if any tooling added later) =====
+node_modules/
+package-lock.json

@@ -8,4 +8,7 @@ rapidfuzz
 pyyaml
 jsonlines
 joblib
-anthropic
+rank-bm25
+# Optional local planner backend; the deterministic packer does not require it.
+transformers
+accelerate

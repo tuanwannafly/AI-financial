@@ -1,0 +1,14 @@
+{
+  "n": 160,
+  "nonempty_rate": 0.94375,
+  "recall@5": 0.671875,
+  "recall@10": 0.725,
+  "recall@20": 0.8125,
+  "by_intent": {
+    "compare_companies": 0.375,
+    "compare_years": 0.6046511627906976,
+    "diff_two": 1.0,
+    "lookup": 0.7692307692307693,
+    "sum_two": 0.9285714285714286
+  }
+}

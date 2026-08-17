@@ -1,0 +1,23 @@
+{
+  "compare": {
+    "scores": {
+      "markdown": 0.5125,
+      "structured": 0.5125,
+      "json": 0.5125,
+      "relevant": 0.5125
+    },
+    "best": "markdown"
+  },
+  "oracle_best": {
+    "exec_rate": 1.0,
+    "first_try_answer_acc": 0.5125,
+    "n": 160,
+    "serializer": "markdown"
+  },
+  "oracle_repaired": {
+    "exec_rate": 1.0,
+    "first_try_answer_acc": 0.5125,
+    "n": 160
+  },
+  "repair_delta_exec_points": 0.0
+}

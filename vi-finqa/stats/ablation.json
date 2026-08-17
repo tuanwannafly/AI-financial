@@ -1,0 +1,35 @@
+{
+  "results": {
+    "full": {
+      "f2": 0.3178648378319326,
+      "exec_acc": 0.94375,
+      "answer_acc": 0.8625,
+      "ok": 0.725
+    },
+    "no_repair": {
+      "f2": 0.3178648378319326,
+      "exec_acc": 0.94375,
+      "answer_acc": 0.8625,
+      "ok": 0.725
+    },
+    "no_ensemble": {
+      "f2": 0.3178648378319326,
+      "exec_acc": 0.94375,
+      "answer_acc": 0.8625,
+      "ok": 0.725
+    },
+    "no_ontology": {
+      "f2": 0.3148994706988507,
+      "exec_acc": 1.0,
+      "answer_acc": 0.91875,
+      "ok": 0.725
+    },
+    "smaller_topk": {
+      "f2": 0.35354600209839177,
+      "exec_acc": 0.94375,
+      "answer_acc": 0.8625,
+      "ok": 0.66875
+    }
+  },
+  "frozen_config": "no_ontology"
+}
